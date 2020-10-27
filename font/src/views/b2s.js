@@ -12,110 +12,80 @@ import {
   InputGroupText,
 } from "reactstrap";
 import "../App.css";
+import { getB2s } from "../functions/function";
 import { useNavigate } from "react-router-dom";
-import { getDifferentiation } from "../functions/function";
 
-function Differentiation() {
+function B2s() {
   const navigate = useNavigate();
-  const [h, seth] = useState(0.64);
-  const [p, setp] = useState(2);
-
-  const [result, setresult] = useState();
+  const [bit2string, setBit2string] = useState("01111000000001010000000000000000");
+  const [result, setResult] = useState("");
+  const generate = () => {
+    getB2s(bit2string).then((res) => {
+      setResult(res);
+    });
+  };
 
   const back = () => {
     navigate("/");
   };
 
-  const generate = () => {
-    const data = {
-      h:h,
-      p:p
-      
-    };
-    getDifferentiation(data).then((res) => {
-       setresult(res)
-    });
-  };
-
   return (
-    <div>
-      <Row style={{ marginTop: "5%" }}>
-        <Col sm="4"></Col>
-        <Col sm="4">
+    <div class="body">
+      <Row style={{ marginTop: "15%" }}>
+        <Col sm="2"></Col>
+        <Col sm="8">
           <div className="text-center">
             <h2 style={{ marginTop: "20px", marginRight: "20px" }}>
-              Differentiation
+              Basic Computing
             </h2>
           </div>
           <div className="text-center">
-            <p>exam:</p>
-            <p>h = 0.64</p>
-            <p>p = 2</p>
+            <p>exam: 01111000000001010000000000000000</p>
           </div>
-
-          <Card style={{ alignItems: "center" }}>
-            <Row style={{ marginTop: "50px" }}>
-              <Col></Col>
-            </Row>
-
+          <div>
             <Row>
-              <div className="text-center">
-                <Row>
-                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>h:</h3>
-                  <Input
-                    style={{
-                      marginTop: "20px",
-                      marginBottom: "20px",
-                      width: 100,
-                    }}
-                    value={h}
-                    onChange={(e) => seth(e.target.value)}
-                    type="text"
-                    name="bit2string"
-                    id="bit2string"
-                  />
-                </Row>
-                <Row>
-                  <h3 style={{ marginTop: "20px", marginRight: "20px" }}>p:</h3>
-                  <Input
-                    style={{
-                      marginTop: "20px",
-                      marginBottom: "20px",
-                      width: 100,
-                    }}
-                    value={p}
-                    onChange={(e) => setp(e.target.value)}
-                    type="text"
-                    name="bit2string"
-                    id="bit2string"
-                  />
-                </Row>
-              </div>
-            </Row>
-            <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
-
-            <Row style={{ marginBottom: "30px" }}>
+              <Col sm="2"></Col>
               <Col sm="8">
-                <Button onClick={generate} color="primary">
-                  <div style={{ width: 300 }}>
-                    <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
-                  </div>
-                </Button>
+                <Card style={{ alignItems: "center" }}>
+                  <Input
+                    style={{
+                      marginTop: "20px",
+                      marginBottom: "20px",
+                      width: 500,
+                    }}
+                    value={bit2string}
+                    type="text"
+                    name="bit2string"
+                    id="bit2string"
+                    onChange={(e) => setBit2string(e.target.value)}
+                  />
+                  <h4>ผลลัพธ์: {result}</h4>
+                  <Row style={{ marginBottom: "30px" }}>
+                    <Col sm="8">
+                      <Button onClick={generate} color="primary">
+                        <div style={{ width: 300 }}>
+                          <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
+                        </div>
+                      </Button>
+                    </Col>
+                    <Col sm="4">
+                      <Button onClick={back} color="secondary">
+                        <div style={{ width: 100 }}>
+                          <h3 style={{ marginTop: "10px" }}>กลับ</h3>
+                        </div>
+                      </Button>
+                    </Col>
+                  </Row>
+                </Card>
               </Col>
-              <Col sm="4">
-                <Button onClick={back} color="secondary">
-                  <div style={{ width: 100 }}>
-                    <h3 style={{ marginTop: "10px" }}>กลับ</h3>
-                  </div>
-                </Button>
-              </Col>
+              <Col sm="2"></Col>
             </Row>
-          </Card>
+          </div>
         </Col>
-
-        <Col sm="4"></Col>
+        <Col sm="2"></Col>
       </Row>
     </div>
   );
 }
-export default Differentiation;
+
+export default B2s;
