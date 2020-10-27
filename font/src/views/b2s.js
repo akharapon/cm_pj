@@ -39,10 +39,6 @@ function B2s() {
             <div style = {{ marginTop: "20px",align : "center"}} >
                 <p>แปลงตัวเลขจากเลขฐานสอง โดยใช้ IEEE single precision format</p>
         <p > exam: 01111000000001010000000000000000 </p> 
-        <p>s = 0,
-            e = 11110000,
-            f = 00001010</p>
-            
         </div > 
         <div >
         <Row >
