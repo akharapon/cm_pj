@@ -24,62 +24,56 @@ function Main() {
           <div className="text-center">
             <Row>
               <Col sm="6">
-                <Card style={{backgroundColor: "#86AC41"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}>
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px"}}><u>บทที่ 1</u></h3>
-                  </CardTitle>
-                  <CardText>
+                    <Button onClick={()=>{nextPage("b2s")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่1</h3>
+                    <CardText>
                     <h4>Basic Computing</h4>
-                  </CardText>
-                 
-                    <Button onClick={()=>{nextPage("b2s")}} color="warning">
-                      <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
+                    </CardText> 
                     </Button>
-                  
+                  </CardTitle>
                 </Card>
               </Col>
 
               <Col sm="6">
-                <Card style={{backgroundColor: "#9A9EAB"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}>
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px" }}><u>บทที่ 2</u></h3>
-                  </CardTitle>
-                  <CardText>
+                    <Button onClick={()=>{nextPage("elimination")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่2</h3>
+                    <CardText>
                     <h4>Linear Equations</h4>
-                  </CardText>
-                  <Button onClick={()=>{nextPage("elimination")}} color="success">
-                    <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
-                  </Button>
+                    </CardText> 
+                    </Button>
+                  </CardTitle>
                 </Card>
               </Col>
             </Row>
 
             <Row className="text-center" style={{ marginTop: "20px" }}>
               <Col sm="6">
-                <Card style={{backgroundColor: "#F1F3CE"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}> 
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px" }}><u>บทที่ 3</u></h3>
+                    <Button onClick={()=>{nextPage("interpolation")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่3</h3>
+                    <CardText>
+                    <h4>Interpolations</h4>
+                    </CardText> 
+                    </Button>
                   </CardTitle>
-                  <CardText>
-                    <h4>Interpolation</h4>
-                  </CardText>
-                  <Button onClick={()=>{nextPage("interpolation")}} color="danger">
-                    <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
-                  </Button>
                 </Card>
               </Col>
 
               <Col sm="6">
-                <Card style={{backgroundColor: "#FE7A47"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}>
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px" }}><u>บทที่ 4</u></h3>
-                  </CardTitle>
-                  <CardText>
+                  <Button onClick={()=>{nextPage("differentiation")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่4</h3>
+                    <CardText>
                     <h4>Differentiation</h4>
-                  </CardText>
-                  <Button onClick={()=>{nextPage("differentiation")}} color="dark">
-                    <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
-                  </Button>
+                    </CardText> 
+                    </Button>
+                  </CardTitle>
                 </Card>
               </Col>
             </Row>
@@ -87,30 +81,28 @@ function Main() {
 
             <Row className="text-center" style={{ marginTop: "20px" }}>
               <Col sm="6">
-                <Card style={{backgroundColor: "#426E86"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}>
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px" }}><u>บทที่ 5</u></h3>
-                  </CardTitle>
-                  <CardText>
+                  <Button onClick={()=>{nextPage("integration")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่5</h3>
+                    <CardText>
                     <h4>Integration</h4>
-                  </CardText>
-                  <Button onClick={()=>{nextPage("integration")}} color="primary">
-                    <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
-                  </Button>
+                    </CardText> 
+                    </Button>
+                  </CardTitle>
                 </Card>
               </Col>
 
               <Col sm="6">
-                <Card style={{backgroundColor: "#D6C6B9"}}>
+                <Card style={{backgroundColor: "#FFFFFF"}}>
                   <CardTitle>
-                    <h3 style={{ marginTop: "10px" }}><u>บทที่ 6</u></h3>
-                  </CardTitle>
-                  <CardText>
+                  <Button onClick={()=>{nextPage("root-finding")}} color="#FFFFFF">
+                      <h3 style={{ marginTop: "10px" }}>บทที่6</h3>
+                    <CardText>
                     <h4>Root-finding</h4>
-                  </CardText>
-                  <Button onClick={()=>{nextPage("root-finding")}} color="info">
-                    <h3 style={{ marginTop: "10px" }}>ทดสอบ</h3>
-                  </Button>
+                    </CardText> 
+                    </Button>
+                  </CardTitle>
                 </Card>
               </Col>
             </Row>
