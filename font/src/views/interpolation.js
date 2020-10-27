@@ -55,21 +55,16 @@ function Interpolation() {
         <Col sm="3"></Col>
         <Col sm="6">
         <div className="text-center">
-           <h2 style={{ marginTop: "20px" }}><u>บทที่3 Interpolation</u></h2>
+           <h2 style={{ marginTop: "20px", marginRight: "20px" }}>Interpolation</h2>
         </div>
-        <Card style={{ marginTop: "20px", marginRight: "0px",margin: "10",backgroundColor: "" }}>
-        <div style={{ marginTop: "0px", marginRight: "0px",margin: "10",backgroundColor: "" }}>
-           <h5 style={{ marginTop: "50px", marginRight: "110px",margin: "50px"}} >exam:</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>เมื่อให้เวลาคือ t (วินาที) , ความเร็วคือ v (เมตร/วินาที)</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>t เป็นเวลาตามแนวนอนหรือแกน x , v เป็นความเร็วตามแนวตั้งหรือแกน y</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>ถ้า t ที่ต้องการหา = 5</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>ให้</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>t = [ 0, 8, 14, 20, 23, 30 ]</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>v = [ 0, 50, 96, 110, 100, 86 ]</h5>
-           <h5 style={{ marginRight: "110px",margin: "50px"}}>ความเร็ว ณ วินาทีที่ 5 เป็นเท่าใด</h5>
+        <div className="text-center">
+           <p>exam:</p>
+           <p>t = 5</p>
+           <p>x = [ 0, 8, 14, 20, 23, 30 ]</p>
+           <p>y = [ 0, 50, 96, 110, 100, 86 ]</p>
         </div>
-       </Card>
-          <Card style={{marginTop: "10px", alignItems: "center" }}>
+       
+          <Card style={{ alignItems: "center" }}>
             <Row style={{ marginTop: "50px" }}>
               <Col></Col>
             </Row>
@@ -261,18 +256,18 @@ function Interpolation() {
                 </Row>
               </div>
             </Row>
-                <h4 style={{ marginBottom: "10px" }}>ผลลัพธ์ : {result}</h4>
+                <h4 style={{ marginBottom: "10px" }}>Result: {result}</h4>
 
             <Row style={{ marginBottom: "30px" }}>
               <Col sm="8">
-                <Button onClick={generate} color="success">
+                <Button onClick={generate} color="primary">
                   <div style={{ width: 300 }}>
                     <h3 style={{ marginTop: "10px" }}>คำนวณ</h3>
                   </div>
                 </Button>
               </Col>
               <Col sm="4">
-                <Button onClick={back} color="primary">
+                <Button onClick={back} color="secondary">
                   <div style={{ width: 100 }}>
                     <h3 style={{ marginTop: "10px" }}>กลับ</h3>
                   </div>
